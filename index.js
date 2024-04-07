@@ -4,6 +4,7 @@ import { connectToMongo } from "./db/db.js";
 import cors from 'cors'
 import cloudinary from 'cloudinary';
 import userRoute from './router/userRoute.js'
+import teamRoute from './router/teamRoute.js'
 
 const app=express();
 
@@ -34,6 +35,8 @@ app.get('/',(req,res)=>{
 
 //user routes
 app.use('/api/user',userRoute)
+
+app.use('/api/team',teamRoute)
 
 
 app.listen(process.env.PORT,()=>{
