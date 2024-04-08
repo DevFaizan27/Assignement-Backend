@@ -10,6 +10,7 @@ const app=express();
 
 app.use(express.json())
 
+
 //middleware to handle cors policy
 app.use(cors());
 
